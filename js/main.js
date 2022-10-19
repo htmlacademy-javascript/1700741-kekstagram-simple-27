@@ -3,7 +3,7 @@ function getRandom (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-getRandom(4,8);
+getRandom(5,8);
 
 function getRandomVariant (min, max) {
   if (min < 0 || max < 0) {return NaN;}
@@ -13,7 +13,7 @@ function getRandomVariant (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-getRandomVariant(4,8);
+getRandomVariant(5,8);
 
 
 function checkLenghtString (checkString, lenghtString) {
