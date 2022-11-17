@@ -18,9 +18,11 @@ const renderPictures = (photos) => {
     const pictureDescription = picture.querySelector('.picture__info');
     pictureLink.textContent = photos[i].url;
     pictureImage.src = photos[i].url;
+    pictureImage.alt = photos[i].description;
     pictureComments.textContent = photos[i].comments;
     pictureLikes.textContent = photos[i].likes;
     pictureDescription.textContent = photos[i].description;
+
     documentFragment.append(picture);
   }
   pictures.append(documentFragment);
