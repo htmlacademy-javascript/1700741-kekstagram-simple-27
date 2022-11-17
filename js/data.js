@@ -1,4 +1,6 @@
-import {getElement} from './util.js';
+import {getRandomPositiveInteger} from './util.js';
+import {getRandomElementArray} from './util.js';
+
 
 const numberLikesLower = 15;
 const numberLikesUpper = 200;
@@ -45,7 +47,7 @@ const generateGalleryPhotos = (numberPhotos) => {
     const photosWithDescription = {
       id: +i,
       url: `photos/${i}.jpg`,
-      description: getElement(description),
+      description: getRandomElementArray(description),
       likes: +getRandomPositiveInteger(numberLikesLower, numberLikesUpper),
       comments: +getRandomPositiveInteger(numberCommentsLower, numberCommentsUpper)
     };
@@ -53,6 +55,5 @@ const generateGalleryPhotos = (numberPhotos) => {
   }
   return galleryPhotos;
 };
-
-generateGalleryPhotos(25);
-export {generateGalleryPhotos(25)};
+console.log(generateGalleryPhotos(25));
+export {generateGalleryPhotos};

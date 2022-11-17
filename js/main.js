@@ -1,4 +1,6 @@
 import {generateGalleryPhotos} from './data.js';
-generateGalleryPhotos(25);
-import {createPictures} from './pictures.js';
-createPictures(generateGalleryPhotos);
+import {renderPictures} from './pictures.js';
+const newGalleryPhotos = generateGalleryPhotos(25);
+renderPictures(newGalleryPhotos);
+console.log('main ggp ' + generateGalleryPhotos(25));
+console.log('main ngp ' + newGalleryPhotos);
