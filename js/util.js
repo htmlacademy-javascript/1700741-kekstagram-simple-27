@@ -23,7 +23,8 @@ function getRandomPositiveInteger (a, b) {
 // * @return {*} — случайный элемент массива
 
 
-const getElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
+const getRandomElementArray = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
-export {getElement};
+export {getRandomElementArray};
+export {getRandomPositiveInteger};
 
