@@ -103,10 +103,10 @@ const textDescription = document.querySelector('.text__description');
 
 new Pristine(textDescription);
 
-const pristine = new Pristine(wizardForm, {
-  classTo: 'setup-wizard-form__element',
-  errorTextParent: 'setup-wizard-form__element',
-  errorTextClass: 'setup-wizard-form__error-text',
+const pristine = new Pristine(textDescription, {
+  classTo: 'textDescription__element',
+  errorTextParent: 'textDescription__element',
+  errorTextClass: 'textDescription__element__error-text',
 });
 
 textDescription.addEventListener('submit', (evt) => {
