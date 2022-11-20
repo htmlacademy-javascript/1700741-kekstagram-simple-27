@@ -55,5 +55,5 @@ const generateGalleryPhotos = (numberPhotos) => {
   }
   return galleryPhotos;
 };
-console.log(generateGalleryPhotos(25));
+
 export {generateGalleryPhotos};
