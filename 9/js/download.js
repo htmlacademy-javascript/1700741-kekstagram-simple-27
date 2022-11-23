@@ -53,7 +53,7 @@ const renderScaleImage = () => {
   scaleControlValue.value = '100%';
   let scaleControl = 1;
 
-  scaleControlBigger.addEventListener('click', function () {
+  scaleControlBigger.addEventListener('click', function() {
     scaleControl += 0.25;
 
     if (scaleControl > 1) {
@@ -75,12 +75,7 @@ const renderScaleImage = () => {
   }
   );
 };
-/*2.2. Наложение эффекта на изображение:
-
-По умолчанию должен быть выбран эффект «Оригинал».
-На изображение может накладываться только один эффект.
-При смене эффекта, выбором одного из значений среди радиокнопок .effects__radio, добавить картинке внутри .img-upload__preview CSS-класс, соответствующий эффекту.
-Например, если выбран эффект .effect-chrome, изображению нужно добавить класс effects__preview--chrome.*/
+// 2.2. Наложение эффекта на изображение:
 
 const renderEffectImage = () => {
   for (let i = 0; i < effectsRadio.length; i++) {
@@ -95,33 +90,8 @@ const renderEffectImage = () => {
 };
 
 
-/*2.3. Комментарий:
-комментарий обязателен;
-длина комментария не может быть меньше 20 символов;
-длина комментария не может составлять больше 140 символов.*/
-const textDescription = document.querySelector('.text__description');
-
-new Pristine(textDescription);
-
-const pristine = new Pristine(textDescription, {
-  classTo: 'textDescription__element',
-  errorTextParent: 'textDescription__element',
-  errorTextClass: 'textDescription__element__error-text',
-});
-
-textDescription.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-
-  const isValid = pristine.validate();
-  if (isValid) {
-    console.log('Можно отправлять');
-  } else {
-    console.log('Форма невалидна');
-  }
-});
-
-
 export {renderScaleImage};
 export {renderEffectImage};
+export {effectsRadio};
 
 
