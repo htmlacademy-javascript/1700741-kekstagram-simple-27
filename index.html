@@ -30,7 +30,7 @@
             </fieldset>
 
             <!-- Форма редактирования изображения -->
-            <div class="img-upload__overlay  hidden">
+            <div class="img-upload__overlay hidden">
               <div class="img-upload__wrapper">
                 <div class="img-upload__preview-container">
 
@@ -106,7 +106,11 @@
 
                 <!-- Добавление комментария к изображению -->
                 <fieldset class="img-upload__text text">
-                    <textarea class="text__description" name="description" placeholder="Ваш комментарий..." required minlength="20" maxlength="140"></textarea>
+                    <textarea class="text__description textDescription__element" name="description" placeholder="Ваш комментарий..." required minlength="20" maxlength="140"
+                     data-pristine-required-message="Обязательное поле"
+                     data-pristine-minlength-message="Минимальная длина 20 символов"
+                     data-pristine-maxlength-message="Максимальная длина 140 символов">
+                    </textarea>
                 </fieldset>
 
                 <!-- Кнопка для отправки данных на сервер -->
@@ -166,8 +170,7 @@
     </section>
   </template>
 
-
-  <!-- <script src="js/main.js" type="module"></script> -->
+  <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
   <script src="pristine/prictine.js"></script>
   <script src="js/main.js" type="module"></script>
 </body>

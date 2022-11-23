@@ -25,6 +25,16 @@ function getRandomPositiveInteger (a, b) {
 
 const getRandomElementArray = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
+
+// делаем функцию для определения нажата ли клавиша ECS
+
+// * @param {элемент} - информация о том, какая клавиша нажата
+
+// * @return {true/false} — true/false
+
+const isEscapeDown = (evt) => evt.key === 'Escape';
+
+
 export {getRandomElementArray};
 export {getRandomPositiveInteger};
-
+export {isEscapeDown};
